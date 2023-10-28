@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="PracticeTestSuite" verbose="1" > <!-->iOS and Android tests can be set up in one xml file but the practice is to have them separate so for practice only Android suite has been created</!-->
+    <groups>
+        <run>
+            <include name="Smoke"/>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="TestUtilities.Listeners"/>
+    </listeners>
+    <test name="Form sumbit end to end tests" >
+        <classes>
+            <class name="org.appiumCourse.ToastMessageTest"/>
+        </classes>
+    </test>
+    <test name="Android practice test" >
+        <classes>
+            <class name="org.appiumCourse.AndroidPracticeTestCase"/>
+        </classes>
+    </test>
+</suite>
